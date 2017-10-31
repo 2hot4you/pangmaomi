@@ -1,0 +1,30 @@
+package test;
+
+public class ABC {
+	 
+	private string things;
+	//开始不装东西
+	public A(){}
+	//开始装东西
+	public A(string things){
+	this.things = things;
+	}
+	//拿出来
+	public string getThings(){
+	return things;
+	}
+	//放进去
+	public void setThings(string things){
+	this.things = things;
+	}
+	}
+	//交换：放到main方法里
+	Basket a = new Basket("eggs");
+	Basket b = new Basket("apple");
+	string Athings,Bthings;
+	Athings = a.getThings();
+	Bthings = b.getThings();
+	a.setThings(Bthings);
+	b.setThings(Athings);
+}
+}

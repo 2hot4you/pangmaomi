@@ -1,0 +1,41 @@
+package test;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class unit {
+	static private String s = "";  
+    static public void input(){//从键盘中输入一行字符，保存到字符串s中  
+        BufferedReader bu = new BufferedReader(  
+                new InputStreamReader(System.in));  
+        try{  
+            s = bu.readLine();  
+        }catch(IOException e){  }  
+    }  
+    static public int getInt(){ //静态方法getInt(),可以直接用类名调用  
+        input();  
+        return Integer.parseInt(s);//将字符串转换成整型，再返回  
+    }  
+  
+}  
+  
+class Result{ //计算平方和立方  
+    void print(int d){  
+        //System.out.println(d+"的平方:"+d*d);  
+        //System.out.println(d+"的立方:"+d*d*d);  
+        if(((d-1)&d) == 0&&(d!=0))  
+            System.out.println("是2的阶次");  
+        else   
+            System.out.println("不是2的阶次");  
+    }  
+}  
+  
+public class PrintResult{  
+    public static void main(String[] args){  
+        Result result = new Result();  
+        System.out.println("请输入一个整数:");  
+        int a = InputData.getInt();  
+        result.print(a);  
+    }  
+}
